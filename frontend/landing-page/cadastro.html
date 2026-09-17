@@ -1,144 +1,361 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Crie sua conta Stocontrol e comece a gerenciar seu estoque.">
-  <title>Criar conta — Stocontrol</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="css/cadastro.css">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Crie sua conta StoControl."
+  >
+
+  <title>Criar conta — StoControl</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/cadastro.css"
+  >
+
+  <script
+    src="js/cadastro.js"
+    defer
+  ></script>
 </head>
-<body class="login-page">
 
-  <main class="login-wrapper">
-    <section class="login-brand">
-      <a href="index.html" class="logo">Sto<span>Control</span></a>
+<body>
 
-      <div class="brand-message">
-        <span class="eyebrow">COMECE AGORA</span>
-        <h1>Mais organização.<br><span>Mais controle.</span></h1>
-        <p>
-          Crie sua conta e tenha uma maneira mais simples
-          e eficiente de gerenciar o estoque da sua empresa.
-        </p>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
 
-        <div class="signup-benefits">
-          <div><span>✓</span> Gestão centralizada</div>
-          <div><span>✓</span> Controle de entradas e saídas</div>
-          <div><span>✓</span> Acesso online</div>
-        </div>
-      </div>
 
-      <div class="brand-footer">
-        <span>© 2026 Stocontrol</span>
-        <span>Gestão sem complicação.</span>
-      </div>
-    </section>
+  <main class="auth-page">
 
-    <section class="login-panel">
-      <div class="login-box signup-box">
-        <div class="login-heading">
-          <h2>Crie sua conta</h2>
-          <p>Preencha os dados abaixo para começar.</p>
-        </div>
+    <a
+      href="index.html"
+      class="back-link"
+    >
+      ← Voltar
+    </a>
 
-        <form id="signupForm" class="login-form">
 
-          <div class="form-group">
-            <label for="name">Nome completo</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Seu nome completo"
-              autocomplete="name"
-              required
-              minlength="3"
-            >
+    <section class="auth-wrapper">
+
+      <!-- APRESENTAÇÃO -->
+
+      <div class="auth-brand">
+
+        <a
+          href="index.html"
+          class="logo"
+        >
+          Sto<span>Control</span>
+        </a>
+
+
+        <div class="brand-content">
+
+          <span class="brand-label">
+            COMECE AGORA
+          </span>
+
+          <h1>
+            Organize hoje.
+            <span>Controle amanhã.</span>
+          </h1>
+
+          <p>
+
+            Crie sua conta e comece a controlar produtos,
+            movimentações e estoque em poucos minutos.
+
+          </p>
+
+
+          <div class="brand-points">
+
+            <div>
+              <span>✓</span>
+              Cadastro rápido
+            </div>
+
+            <div>
+              <span>✓</span>
+              Gestão simplificada
+            </div>
+
+            <div>
+              <span>✓</span>
+              Sem instalação
+            </div>
+
           </div>
 
-          <div class="form-group">
-            <label for="company">Nome da empresa</label>
-            <input
-              type="text"
-              id="company"
-              name="company"
-              placeholder="Nome da sua empresa"
-              autocomplete="organization"
-              required
-              minlength="2"
-            >
+        </div>
+
+      </div>
+
+
+      <!-- FORMULÁRIO -->
+
+      <div class="auth-card">
+
+        <div class="auth-card-header">
+
+          <span class="eyebrow">
+            NOVA CONTA
+          </span>
+
+          <h2>
+            Crie sua conta
+          </h2>
+
+          <p>
+            Leva menos de um minuto.
+          </p>
+
+        </div>
+
+
+        <form
+          id="registerForm"
+          novalidate
+        >
+
+          <div class="form-row">
+
+            <div class="form-group">
+
+              <label for="name">
+                Seu nome
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Seu nome"
+                autocomplete="name"
+                required
+              >
+
+              <small
+                class="error-message"
+                id="nameError"
+              ></small>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="company">
+                Empresa
+              </label>
+
+              <input
+                type="text"
+                id="company"
+                name="company"
+                placeholder="Nome da empresa"
+                autocomplete="organization"
+                required
+              >
+
+              <small
+                class="error-message"
+                id="companyError"
+              ></small>
+
+            </div>
+
           </div>
 
+
           <div class="form-group">
-            <label for="email">E-mail profissional</label>
+
+            <label for="email">
+              E-mail
+            </label>
+
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="seu@email.com"
+              placeholder="voce@empresa.com"
               autocomplete="email"
               required
             >
+
+            <small
+              class="error-message"
+              id="emailError"
+            ></small>
+
           </div>
 
+
           <div class="form-group">
-            <label for="password">Senha</label>
-            <div class="password-field">
+
+            <label for="password">
+              Senha
+            </label>
+
+            <div class="password-wrapper">
+
               <input
                 type="password"
                 id="password"
                 name="password"
-                placeholder="Crie uma senha segura"
+                placeholder="Crie uma senha"
                 autocomplete="new-password"
                 required
-                minlength="8"
               >
-              <button type="button" id="togglePassword" aria-label="Mostrar senha">Mostrar</button>
+
+              <button
+                type="button"
+                class="password-toggle"
+                data-password-target="password"
+              >
+                Mostrar
+              </button>
+
             </div>
-            <span class="field-hint">Mínimo de 8 caracteres.</span>
+
+
+            <div class="password-strength">
+
+              <span id="strengthBar"></span>
+
+            </div>
+
+
+            <small
+              class="password-hint"
+              id="passwordHint"
+            >
+              Use pelo menos 8 caracteres.
+            </small>
+
+            <small
+              class="error-message"
+              id="passwordError"
+            ></small>
+
           </div>
 
+
           <div class="form-group">
-            <label for="confirmPassword">Confirmar senha</label>
-            <div class="password-field">
+
+            <label for="confirmPassword">
+              Confirmar senha
+            </label>
+
+            <div class="password-wrapper">
+
               <input
                 type="password"
                 id="confirmPassword"
                 name="confirmPassword"
-                placeholder="Digite sua senha novamente"
+                placeholder="Digite a senha novamente"
                 autocomplete="new-password"
                 required
               >
-              <button type="button" id="toggleConfirm" aria-label="Mostrar confirmação de senha">Mostrar</button>
+
+              <button
+                type="button"
+                class="password-toggle"
+                data-password-target="confirmPassword"
+              >
+                Mostrar
+              </button>
+
             </div>
+
+            <small
+              class="error-message"
+              id="confirmPasswordError"
+            ></small>
+
           </div>
 
-          <label class="terms-check">
-            <input type="checkbox" id="terms" required>
+
+          <label class="terms-field">
+
+            <input
+              type="checkbox"
+              id="terms"
+            >
+
             <span>
-              Concordo com os <a href="#">Termos de uso</a> e a
-              <a href="#">Política de privacidade</a>.
+              Concordo com os
+              <a href="#">
+                Termos de Uso
+              </a>
+              e
+              <a href="#">
+                Política de Privacidade
+              </a>.
             </span>
+
           </label>
 
-          <button type="submit" class="btn btn-primary btn-block">
-            Criar minha conta <span>→</span>
+          <small
+            class="error-message terms-error"
+            id="termsError"
+          ></small>
+
+
+          <button
+            type="submit"
+            class="btn-primary"
+            id="registerButton"
+          >
+            Criar minha conta
           </button>
 
-          <div class="form-message" id="formMessage" role="alert"></div>
+
+          <div
+            class="form-status"
+            id="formStatus"
+          ></div>
+
         </form>
 
-        <p class="signup-text account-login">
+
+        <div class="auth-footer">
+
           Já possui uma conta?
-          <a href="login.html">Entrar</a>
-        </p>
+
+          <a href="login.html">
+            Entrar
+          </a>
+
+        </div>
+
       </div>
+
     </section>
+
   </main>
 
-  <script src="js/cadastro.js"></script>
 </body>
+
 </html>
