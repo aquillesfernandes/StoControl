@@ -1,53 +1,197 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-const loginForm = document.getElementById("loginForm");
-const emailInput = document.getElementById("email");
-const passwordInput = document.getElementById("password");
-const togglePassword = document.getElementById("togglePassword");
-const formMessage = document.getElementById("formMessage");
-const forgotPassword = document.getElementById("forgotPassword");
+  const form =
+    document.getElementById("loginForm");
 
-function showMessage(message) {
-  formMessage.textContent = message;
-  formMessage.classList.add("show");
-}
+  const email =
+    document.getElementById("email");
 
-togglePassword.addEventListener("click", () => {
-  const isPassword = passwordInput.type === "password";
+  const password =
+    document.getElementById("password");
 
-  passwordInput.type = isPassword ? "text" : "password";
-  togglePassword.textContent = isPassword ? "Ocultar" : "Mostrar";
-  togglePassword.setAttribute(
-    "aria-label",
-    isPassword ? "Ocultar senha" : "Mostrar senha"
-  );
-});
+  const emailError =
+    document.getElementById("emailError");
 
-loginForm.addEventListener("submit", event => {
-  event.preventDefault();
-  formMessage.classList.remove("show");
+  const passwordError =
+    document.getElementById("passwordError");
 
-  const email = emailInput.value.trim();
-  const password = passwordInput.value;
+  const passwordToggle =
+    document.getElementById("passwordToggle");
 
-  if (!email || !password) {
-    showMessage("Preencha todos os campos para continuar.");
-    return;
+  const loginButton =
+    document.getElementById("loginButton");
+
+  const formStatus =
+    document.getElementById("formStatus");
+
+
+  requestAnimationFrame(() => {
+    document.body.classList.add("loaded");
+  });
+
+
+  function isValidEmail(value) {
+
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+
   }
 
-  if (!emailInput.validity.valid) {
-    showMessage("Digite um e-mail válido.");
-    return;
+
+  function clearErrors() {
+
+    emailError.textContent = "";
+    passwordError.textContent = "";
+
+    email.classList.remove("input-error");
+    password.classList.remove("input-error");
+
+    formStatus.textContent = "";
+    formStatus.className = "form-status";
+
   }
 
-  if (password.length < 6) {
-    showMessage("A senha deve ter pelo menos 6 caracteres.");
-    return;
-  }
 
-  showMessage("Interface de demonstração: conecte este formulário ao seu backend para autenticar o usuário.");
-});
+  passwordToggle.addEventListener("click", () => {
 
-forgotPassword.addEventListener("click", event => {
-  event.preventDefault();
-  showMessage("A recuperação de senha será disponibilizada quando o sistema de autenticação estiver conectado.");
+    const hidden =
+      password.type === "password";
+
+
+    password.type =
+      hidden
+        ? "text"
+        : "password";
+
+
+    passwordToggle.textContent =
+      hidden
+        ? "Ocultar"
+        : "Mostrar";
+
+
+    passwordToggle.setAttribute(
+      "aria-label",
+      hidden
+        ? "Ocultar senha"
+        : "Mostrar senha"
+    );
+
+  });
+
+
+  form.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    clearErrors();
+
+    let valid = true;
+
+
+    if (!email.value.trim()) {
+
+      emailError.textContent =
+        "Informe seu e-mail.";
+
+      email.classList.add("input-error");
+
+      valid = false;
+
+    } else if (
+      !isValidEmail(
+        email.value.trim()
+      )
+    ) {
+
+      emailError.textContent =
+        "Digite um e-mail válido.";
+
+      email.classList.add("input-error");
+
+      valid = false;
+
+    }
+
+
+    if (!password.value) {
+
+      passwordError.textContent =
+        "Informe sua senha.";
+
+      password.classList.add("input-error");
+
+      valid = false;
+
+    } else if (
+      password.value.length < 6
+    ) {
+
+      passwordError.textContent =
+        "A senha deve possuir pelo menos 6 caracteres.";
+
+      password.classList.add("input-error");
+
+      valid = false;
+
+    }
+
+
+    if (!valid) {
+
+      formStatus.textContent =
+        "Verifique os campos acima.";
+
+      formStatus.classList.add("error");
+
+      return;
+
+    }
+
+
+    loginButton.disabled = true;
+
+    loginButton.textContent =
+      "Entrando...";
+
+
+    /*
+      Simulação de login.
+
+      Quando você criar o backend,
+      será aqui que enviaremos os dados
+      para a API.
+    */
+
+    setTimeout(() => {
+
+      formStatus.textContent =
+        "Login validado com sucesso.";
+
+      formStatus.classList.add("success");
+
+      loginButton.textContent =
+        "✓ Acesso liberado";
+
+
+      setTimeout(() => {
+
+        /*
+          Futuramente você poderá
+          redirecionar para:
+
+          window.location.href =
+            "dashboard.html";
+        */
+
+        loginButton.disabled = false;
+
+        loginButton.textContent =
+          "Entrar";
+
+      }, 1600);
+
+    }, 900);
+
+  });
+
 });

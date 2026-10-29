@@ -1,62 +1,189 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Acesse sua conta Stocontrol e gerencie seu estoque.">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Entre na sua conta StoControl."
+  >
+
   <title>Entrar — StoControl</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/login.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="css/login.css"
+  >
+
+  <script
+    src="js/login.js"
+    defer
+  ></script>
 </head>
-<body class="login-page">
 
-  <main class="login-wrapper">
-    <section class="login-brand">
-      <a href="index.html" class="logo">Sto<span>Control</span></a>
+<body>
 
-      <div class="brand-message">
-        <span class="eyebrow">GESTÃO INTELIGENTE</span>
-        <h1>Seu estoque.<br><span>Seu controle.</span></h1>
-        <p>
-          Acesse sua conta e continue gerenciando sua operação
-          de forma simples e eficiente.
-        </p>
-      </div>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
 
-      <div class="brand-footer">
-        <span>© 2026 Stocontrol</span>
-        <span>Gestão sem complicação.</span>
-      </div>
-    </section>
 
-    <section class="login-panel">
-      <div class="login-box">
-        <div class="login-heading">
-          <h2>Bem-vindo de volta</h2>
-          <p>Entre na sua conta para continuar.</p>
-        </div>
+  <main class="auth-page">
 
-        <form id="loginForm" class="login-form">
-          <div class="form-group">
-            <label for="email">E-mail</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="seu@email.com"
-              autocomplete="email"
-              required
-            >
-          </div>
+    <a
+      href="index.html"
+      class="back-link"
+    >
+      ← Voltar
+    </a>
 
-          <div class="form-group">
-            <div class="label-row">
-              <label for="password">Senha</label>
-              <a href="#" id="forgotPassword">Esqueceu a senha?</a>
+
+    <section class="auth-wrapper">
+
+      <!-- LADO ESQUERDO -->
+
+      <div class="auth-brand">
+
+        <a
+          href="index.html"
+          class="logo"
+        >
+          Sto<span>Control</span>
+        </a>
+
+
+        <div class="brand-content">
+
+          <span class="brand-label">
+            BEM-VINDO DE VOLTA
+          </span>
+
+          <h1>
+            Seu estoque.
+            <span>Sob controle.</span>
+          </h1>
+
+          <p>
+            Entre na sua conta e continue acompanhando seus produtos,
+            movimentações e relatórios.
+          </p>
+
+
+          <div class="brand-points">
+
+            <div>
+              <span>✓</span>
+              Controle centralizado
             </div>
 
-            <div class="password-field">
+            <div>
+              <span>✓</span>
+              Acesso rápido
+            </div>
+
+            <div>
+              <span>✓</span>
+              Informações em tempo real
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- FORMULÁRIO -->
+
+      <div class="auth-card">
+
+        <div class="auth-card-header">
+
+          <span class="eyebrow">
+            ACESSO
+          </span>
+
+          <h2>
+            Entre na sua conta
+          </h2>
+
+          <p>
+            Informe seus dados para continuar.
+          </p>
+
+        </div>
+
+
+        <form
+          id="loginForm"
+          novalidate
+        >
+
+          <div class="form-group">
+
+            <label for="email">
+              E-mail
+            </label>
+
+            <div class="input-wrapper">
+
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="voce@empresa.com"
+                autocomplete="email"
+                required
+              >
+
+            </div>
+
+            <small
+              class="error-message"
+              id="emailError"
+            ></small>
+
+          </div>
+
+
+          <div class="form-group">
+
+            <div class="label-row">
+
+              <label for="password">
+                Senha
+              </label>
+
+              <a
+                href="#"
+                class="forgot-link"
+              >
+                Esqueci minha senha
+              </a>
+
+            </div>
+
+
+            <div class="input-wrapper password-wrapper">
+
               <input
                 type="password"
                 id="password"
@@ -64,42 +191,74 @@
                 placeholder="Digite sua senha"
                 autocomplete="current-password"
                 required
-                minlength="6"
               >
-              <button type="button" id="togglePassword" aria-label="Mostrar senha">Mostrar</button>
+
+              <button
+                type="button"
+                class="password-toggle"
+                id="passwordToggle"
+                aria-label="Mostrar senha"
+              >
+                Mostrar
+              </button>
+
             </div>
+
+            <small
+              class="error-message"
+              id="passwordError"
+            ></small>
+
           </div>
 
-          <label class="remember-me">
-            <input type="checkbox" id="remember">
-            <span>Manter conectado</span>
+
+          <label class="remember-field">
+
+            <input
+              type="checkbox"
+              id="remember"
+            >
+
+            <span>
+              Lembrar de mim
+            </span>
+
           </label>
 
-          <button type="submit" class="btn btn-primary btn-block">
-            Entrar na conta <span>→</span>
+
+          <button
+            type="submit"
+            class="btn-primary"
+            id="loginButton"
+          >
+            Entrar
           </button>
 
-          <div class="form-message" id="formMessage" role="alert"></div>
+
+          <div
+            class="form-status"
+            id="formStatus"
+          ></div>
+
         </form>
 
-        <div class="login-divider">
-          <span>ou</span>
+
+        <div class="auth-footer">
+
+          Ainda não possui uma conta?
+
+          <a href="cadastro.html">
+            Criar conta
+          </a>
+
         </div>
 
-        <p class="signup-text">
-          Ainda não possui uma conta?
-          <a href="cadastro.html">Criar agora</a>
-        </p>
-
-        <p class="login-terms">
-          Ao entrar, você concorda com nossos
-          <a href="#">Termos de uso</a> e
-          <a href="#">Política de privacidade</a>.
-        </p>
       </div>
+
     </section>
+
   </main>
 
-  <script src="js/login.js"></script>
 </body>
+
 </html>

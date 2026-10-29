@@ -1,306 +1,2077 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Stocontrol — gestão de estoque simples, eficiente e inteligente para empresas.">
-  <title>Stocontrol — Gestão de Estoque</title>
+  <meta name="description" content="StoControl — controle de estoque simples, rápido e inteligente para o seu negócio.">
+  <title>StoControl — Controle seu estoque sem complicação</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
+
 <body>
+  <!-- BACKGROUND -->
 
-  <header class="header">
-    <div class="container nav">
-      <a href="#" class="logo">Sto<span>Control</span></a>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#recursos">Recursos</a>
-        <a href="#como-funciona">Como funciona</a>
-        <a href="#planos">Planos</a>
-      </nav>
+  <!-- NAVBAR -->
 
-      <div class="nav-actions">
-        <a href="login.html" class="login-link">Entrar</a>
-        <a href="#planos" class="btn btn-primary">Começar agora</a>
-      </div>
+  <header class="navbar">
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+    <a href="#inicio" class="logo">Sto<span>Control</span></a>
+
+    <nav class="nav-links" id="navLinks">
+
+      <a href="#solucao"> Produto </a>
+      <a href="#recursos"> Recursos </a>
+      <a href="#planos">Planos</a>
+      <a href="#faq">FAQ</a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <a href="login.html" class="login-link"> Entrar </a>
+      <a href="cadastro.html" class="btn btn-primary"> Criar conta </a>
+
     </div>
+
+    <button type="button" class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"> ☰ </button>
+
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <span class="eyebrow">GESTÃO DE ESTOQUE SIMPLIFICADA</span>
 
-          <h1>Seu estoque sob controle. <span>Seu negócio em evolução.</span></h1>
+  <main>
+    <!-- HERO -->
+
+    <section class="hero hero-new" id="inicio">
+
+      <div class="hero-content">
+
+        <div class="hero-badge"><span></span>Gestão de estoque sem complicação</div>
+
+        <h1>Controle seu estoque.<br><span> Sem planilhas. Sem confusão. </span></h1>
+
+        <p class="hero-description"> Saiba o que entrou, o que saiu e o que precisa ser reposto antes que isso vire um problema. </p>
+
+        <div class="hero-actions">
+
+          <a href="cadastro.html" class="btn btn-primary btn-large"> Começar agora <span> → </span></a>
+          <a href="#solucao" class="hero-demo-link"> Ver como funciona <span> ↓ </span></a>
+
+        </div>
+
+
+        <div class="hero-mini-info">
+
+          <span> ✓ Configuração simples </span>
+          <span> ✓ Acesso pelo navegador </span>
+          <span> ✓ Cancele quando quiser </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================== -->
+    <!-- DASHBOARD -->
+    <!-- ===================================================== -->
+
+    <section class="dashboard-section" id="solucao">
+
+      <div class="dashboard-window">
+
+        <!-- TOPO DA JANELA -->
+
+        <div class="window-header">
+
+          <div class="window-dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+
+          <div class="window-url">
+            app.stocontrol.com
+          </div>
+
+
+          <div class="window-status">
+
+            <span></span>
+
+            Sistema online
+
+          </div>
+
+        </div>
+
+
+        <div class="dashboard-layout">
+
+          <!-- SIDEBAR -->
+
+          <aside class="sidebar">
+
+            <div class="sidebar-logo">
+
+              <span class="logo-symbol"> S </span>StoControl
+
+            </div>
+
+
+            <p class="sidebar-label"> MENU PRINCIPAL </p>
+
+            <nav class="sidebar-nav">
+
+              <a href="#" class="sidebar-link active" data-section="dashboard"><span> ▦ </span> Dashboard </a>
+              <a href="#" class="sidebar-link" data-section="produtos"><span>▤</span> Produtos </a>
+              <a href="#" class="sidebar-link" data-section="movimentacoes"><span>↗</span> Movimentações </a>
+              <a href="#" class="sidebar-link" data-section="relatorios"><span>▥</span> Relatórios </a>
+
+            </nav>
+
+
+            <p class="sidebar-label"> GERENCIAMENTO </p>
+
+
+            <nav class="sidebar-nav">
+
+              <a href="#" class="sidebar-link" data-section="categorias"><span>♧</span> Categorias </a>
+              <a href="#" class="sidebar-link" data-section="configuracoes"><span>⚙</span> Configurações </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+              <div class="user-avatar"> SC </div>
+
+              <div>
+
+                <strong> Seu negócio </strong>
+                <small> Administrador </small>
+
+              </div>
+
+            </div>
+
+          </aside>
+
+
+          <!-- DASHBOARD -->
+
+          <div class="dashboard-main active" id="dashboard">
+
+            <div class="dashboard-heading">
+
+              <div>
+
+                <p class="dashboard-greeting"> VISÃO GERAL </p>
+                <h2> Olá, administrador 👋 </h2>
+                <p>Acompanhe o desempenho do seu estoque. </p>
+
+              </div>
+
+              <button type="button" class="dashboard-date" id="dateButton">
+
+                <span> ▣ </span>
+                <span id="currentDate"> Hoje </span>
+                <span> ⌄ </span>
+
+              </button>
+
+            </div>
+
+            <!-- ESTATÍSTICAS -->
+
+            <div class="stats-grid">
+
+              <div class="stat-card">
+
+                <div class="stat-top">
+
+                  <span> Total de produtos </span>
+                  <span class="stat-icon blue"> ▦ </span>
+
+                </div>
+
+                <strong> 1.248 </strong>
+
+                <p class="stat-positive">
+
+                  ↗ 12% <span> vs. mês anterior </span>
+
+                </p>
+
+              </div>
+
+              <div class="stat-card">
+
+                <div class="stat-top">
+
+                  <span> Valor em estoque </span>
+                  <span class="stat-icon purple"> ◈ </span>
+
+                </div>
+
+                <strong> R$ 84,2k </strong>
+
+                <p class="stat-positive">
+
+                  ↗ 8,4% <span> vs. mês anterior </span>
+
+                </p>
+
+              </div>
+
+              <div class="stat-card">
+
+                <div class="stat-top">
+
+                  <span>
+                    Estoque baixo
+                  </span>
+                  <span class="stat-icon orange"> ! </span>
+
+                </div>
+
+                <strong> 24 </strong>
+
+                <p class="stat-warning"> ● Requer atenção </p>
+
+              </div>
+
+            </div>
+
+            <!-- GRÁFICO + ATIVIDADE -->
+
+            <div class="dashboard-grid">
+
+              <div class="panel chart-panel">
+
+                <div class="panel-heading">
+
+                  <div>
+
+                    <h3> Movimentação do estoque </h3>
+                    <p> Entradas e saídas de produtos </p>
+
+                  </div>
+
+                  <select id="chartPeriod" aria-label="Período do gráfico">
+
+                    <option value="month"> Este mês </option>
+                    <option value="quarter"> Últimos 3 meses </option>
+
+                  </select>
+
+                </div>
+
+                <div class="chart-legend">
+
+                  <span><i class="legend-entry"></i> Entradas </span>
+                  <span><i class="legend-exit"></i> Saídas </span>
+
+                </div>
+
+                <div class="chart" id="inventoryChart">
+
+                  <div class="chart-y">
+
+                    <span>1.500</span>
+                    <span>1.000</span>
+                    <span>500</span>
+                    <span>0</span>
+
+                  </div>
+
+                  <div class="chart-area">
+
+                    <div class="chart-grid-lines">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+
+
+                    <div class="chart-bars" id="chartBars">
+
+                      <div class="chart-group">
+
+                        <i class="bar-entry" style="height: 35%"></i>
+                        <i class="bar-exit" style="height: 22%"></i>
+
+                      </div>
+
+                      <div class="chart-group">
+
+                        <i class="bar-entry" style="height: 55%"></i>
+                        <i class="bar-exit" style="height: 36%"></i>
+
+                      </div>
+
+                      <div class="chart-group">
+
+                        <i class="bar-entry" style="height: 42%"></i>
+                        <i class="bar-exit" style="height: 30%"></i>
+
+                      </div>
+
+                      <div class="chart-group">
+
+                        <i class="bar-entry" style="height: 80%"></i>
+                        <i class="bar-exit" style="height: 52%"></i>
+
+                      </div>
+
+                      <div class="chart-group">
+
+                        <i class="bar-entry" style="height: 62%"></i>
+                        <i class="bar-exit" style="height: 45%"></i>
+
+                      </div>
+
+                      <div class="chart-group">
+
+                        <i class="bar-entry" style="height: 90%"></i>
+                        <i class="bar-exit" style="height: 60%"></i>
+
+                      </div>
+
+                      <div class="chart-group">
+
+                        <i class="bar-entry" style="height: 70%"></i>
+                        <i class="bar-exit" style="height: 50%"></i>
+
+                      </div>
+
+                    </div>
+
+                    <div class="chart-labels">
+
+                      <span>Seg</span>
+                      <span>Ter</span>
+                      <span>Qua</span>
+                      <span>Qui</span>
+                      <span>Sex</span>
+                      <span>Sáb</span>
+                      <span>Dom</span>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="panel activity-panel">
+
+                <div class="panel-heading">
+
+                  <div>
+
+                    <h3> Atividade recente </h3>
+                    <p> Últimas movimentações </p>
+
+                  </div>
+
+                  <span class="panel-more"> ••• </span>
+
+                </div>
+
+                <div class="activity-list">
+
+                  <div class="activity-item">
+
+                    <span class="activity-icon green"> ↓ </span>
+
+                    <div>
+
+                      <strong> Entrada de produtos </strong>
+                      <small> Produto A · 120 unidades </small>
+
+                    </div>
+
+                    <time> 10:42 </time>
+
+                  </div>
+
+                  <div class="activity-item">
+
+                    <span class="activity-icon blue"> ↑ </span>
+
+                    <div>
+
+                      <strong> Saída de produtos </strong>
+                      <small> Produto B · 18 unidades </small>
+
+                    </div>
+
+                    <time> 09:35 </time>
+
+                  </div>
+
+                  <div class="activity-item">
+
+                    <span class="activity-icon orange"> ! </span>
+
+                    <div>
+
+                      <strong> Estoque baixo </strong>
+                      <small> Produto C · Reposição </small>
+
+                    </div>
+
+                    <time> 08:20 </time>
+
+                  </div>
+
+                  <div class="activity-item">
+
+                    <span class="activity-icon purple"> + </span>
+
+                    <div>
+
+                      <strong> Novo produto </strong>
+                      <small> Produto D · Cadastrado </small>
+
+                    </div>
+
+                    <time> Ontem </time>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- PRODUTOS RESUMO -->
+
+            <div class="panel products-panel">
+
+              <div class="panel-heading">
+
+                <div>
+
+                  <h3> Produtos em estoque </h3>
+                  <p> Acompanhe os produtos cadastrados. </p>
+
+                </div>
+
+                <button type="button" class="panel-action" id="viewProducts" data-open-section="produtos"> Ver todos → </button>
+
+              </div>
+
+              <div class="product-table">
+
+                <div class="product-table-head">
+
+                  <span>Produto</span>
+                  <span>Categoria</span>
+                  <span>Quantidade</span>
+                  <span>Status</span>
+
+                </div>
+
+                <div class="product-table-row">
+
+                  <span class="product-name-cell"><i class="product-thumb"> ▦ </i> Produto A </span>
+                  <span> Eletrônicos </span>
+                  <span> 120 un. </span>
+                  <span class="table-status available"> Disponível </span>
+
+                </div>
+
+                <div class="product-table-row">
+
+                  <span class="product-name-cell"><i class="product-thumb"> ▦ </i> Produto B </span>
+                  <span> Acessórios </span>
+                  <span> 18 un. </span>
+                  <span class="table-status low"> Estoque baixo </span>
+
+                </div>
+
+                <div class="product-table-row">
+
+                  <span class="product-name-cell"><i class="product-thumb"> ▦ </i> Produto C </span>
+                  <span> Informática </span>
+                  <span> 75 un. </span>
+                  <span class="table-status available"> Disponível </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- PRODUTOS -->
+
+          <section class="app-section" id="produtos">
+
+            <div class="dashboard-heading">
+
+              <div>
+
+                <p class="dashboard-greeting"> PRODUTOS </p>
+                <h2> Produtos cadastrados </h2>
+                <p> Gerencie os produtos do seu estoque. </p>
+
+              </div>
+
+              <button type="button" class="panel-action"> + Novo produto </button>
+
+            </div>
+
+            <div class="panel products-panel">
+
+              <div class="panel-heading">
+
+                <div>
+
+                  <h3> Todos os produtos </h3>
+                  <p> Visualize os itens cadastrados no sistema. </p>
+
+                </div>
+
+                <input type="search" placeholder="Buscar produto..." aria-label="Buscar produto">
+
+              </div>
+
+
+              <div class="product-table">
+
+                <div class="product-table-head">
+
+                  <span>Produto</span>
+                  <span>Categoria</span>
+                  <span>Quantidade</span>
+                  <span>Status</span>
+
+                </div>
+
+
+                <div class="product-table-row">
+
+                  <span class="product-name-cell"><i class="product-thumb"> ▦ </i> Notebook Pro </span>
+                  <span> Informática </span>
+                  <span> 32 un. </span>
+                  <span class="table-status available"> Disponível </span>
+
+                </div>
+
+                <div class="product-table-row">
+
+                  <span class="product-name-cell">
+
+                    <i class="product-thumb">
+                      ▦
+                    </i>
+
+                    Mouse sem fio
+
+                  </span>
+
+                  <span>
+                    Acessórios
+                  </span>
+
+                  <span>
+                    18 un.
+                  </span>
+
+                  <span class="table-status low">
+                    Estoque baixo
+                  </span>
+
+                </div>
+
+
+                <div class="product-table-row">
+
+                  <span class="product-name-cell">
+
+                    <i class="product-thumb">
+                      ▦
+                    </i>
+
+                    Teclado mecânico
+
+                  </span>
+
+                  <span>
+                    Acessórios
+                  </span>
+
+                  <span>
+                    75 un.
+                  </span>
+
+                  <span class="table-status available">
+                    Disponível
+                  </span>
+
+                </div>
+
+
+                <div class="product-table-row">
+
+                  <span class="product-name-cell">
+
+                    <i class="product-thumb">
+                      ▦
+                    </i>
+
+                    Monitor 24"
+
+                  </span>
+
+                  <span>
+                    Eletrônicos
+                  </span>
+
+                  <span>
+                    42 un.
+                  </span>
+
+                  <span class="table-status available">
+                    Disponível
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- MOVIMENTAÇÕES -->
+
+          <section
+            class="app-section"
+            id="movimentacoes"
+          >
+
+            <div class="dashboard-heading">
+
+              <div>
+
+                <p class="dashboard-greeting">
+                  MOVIMENTAÇÕES
+                </p>
+
+                <h2>
+                  Entradas e saídas
+                </h2>
+
+                <p>
+                  Acompanhe todas as movimentações do estoque.
+                </p>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="panel-action"
+              >
+                + Nova movimentação
+              </button>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+              <div class="stat-card">
+
+                <div class="stat-top">
+
+                  <span>
+                    Entradas
+                  </span>
+
+                  <span class="stat-icon blue">
+                    ↓
+                  </span>
+
+                </div>
+
+                <strong>
+                  382
+                </strong>
+
+                <p class="stat-positive">
+                  Este mês
+                </p>
+
+              </div>
+
+
+              <div class="stat-card">
+
+                <div class="stat-top">
+
+                  <span>
+                    Saídas
+                  </span>
+
+                  <span class="stat-icon orange">
+                    ↑
+                  </span>
+
+                </div>
+
+                <strong>
+                  219
+                </strong>
+
+                <p>
+                  Este mês
+                </p>
+
+              </div>
+
+
+              <div class="stat-card">
+
+                <div class="stat-top">
+
+                  <span>
+                    Saldo
+                  </span>
+
+                  <span class="stat-icon blue">
+                    ◈
+                  </span>
+
+                </div>
+
+                <strong>
+                  +163
+                </strong>
+
+                <p class="stat-positive">
+                  Resultado positivo
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="panel products-panel">
+
+              <div class="panel-heading">
+
+                <div>
+
+                  <h3>
+                    Histórico
+                  </h3>
+
+                  <p>
+                    Movimentações mais recentes.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="product-table">
+
+                <div class="product-table-head">
+
+                  <span>Produto</span>
+                  <span>Tipo</span>
+                  <span>Quantidade</span>
+                  <span>Data</span>
+
+                </div>
+
+
+                <div class="product-table-row">
+
+                  <span>
+                    Notebook Pro
+                  </span>
+
+                  <span class="table-status available">
+                    Entrada
+                  </span>
+
+                  <span>
+                    +20
+                  </span>
+
+                  <span>
+                    Hoje, 10:42
+                  </span>
+
+                </div>
+
+
+                <div class="product-table-row">
+
+                  <span>
+                    Mouse sem fio
+                  </span>
+
+                  <span class="table-status low">
+                    Saída
+                  </span>
+
+                  <span>
+                    -8
+                  </span>
+
+                  <span>
+                    Hoje, 09:35
+                  </span>
+
+                </div>
+
+
+                <div class="product-table-row">
+
+                  <span>
+                    Monitor 24"
+                  </span>
+
+                  <span class="table-status available">
+                    Entrada
+                  </span>
+
+                  <span>
+                    +15
+                  </span>
+
+                  <span>
+                    Ontem, 16:20
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- RELATÓRIOS -->
+
+          <section
+            class="app-section"
+            id="relatorios"
+          >
+
+            <div class="dashboard-heading">
+
+              <div>
+
+                <p class="dashboard-greeting">
+                  RELATÓRIOS
+                </p>
+
+                <h2>
+                  Relatórios do estoque
+                </h2>
+
+                <p>
+                  Analise os principais dados da sua operação.
+                </p>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="panel-action"
+              >
+                Exportar relatório
+              </button>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+              <div class="stat-card">
+
+                <div class="stat-top">
+
+                  <span>
+                    Produtos ativos
+                  </span>
+
+                  <span class="stat-icon blue">
+                    ▦
+                  </span>
+
+                </div>
+
+                <strong>
+                  1.248
+                </strong>
+
+                <p>
+                  Total cadastrado
+                </p>
+
+              </div>
+
+
+              <div class="stat-card">
+
+                <div class="stat-top">
+
+                  <span>
+                    Valor total
+                  </span>
+
+                  <span class="stat-icon blue">
+                    ◈
+                  </span>
+
+                </div>
+
+                <strong>
+                  R$ 84,2k
+                </strong>
+
+                <p>
+                  Valor armazenado
+                </p>
+
+              </div>
+
+
+              <div class="stat-card">
+
+                <div class="stat-top">
+
+                  <span>
+                    Estoque crítico
+                  </span>
+
+                  <span class="stat-icon orange">
+                    !
+                  </span>
+
+                </div>
+
+                <strong>
+                  24
+                </strong>
+
+                <p class="stat-warning">
+                  Requer reposição
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="panel chart-panel">
+
+              <div class="panel-heading">
+
+                <div>
+
+                  <h3>
+                    Desempenho mensal
+                  </h3>
+
+                  <p>
+                    Comparativo das movimentações.
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div class="chart">
+
+                <div class="chart-y">
+
+                  <span>1.500</span>
+                  <span>1.000</span>
+                  <span>500</span>
+                  <span>0</span>
+
+                </div>
+
+
+                <div class="chart-area">
+
+                  <div class="chart-grid-lines">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                  </div>
+
+
+                  <div class="chart-bars">
+
+                    <div class="chart-group">
+
+                      <i
+                        class="bar-entry"
+                        style="height: 45%"
+                      ></i>
+
+                      <i
+                        class="bar-exit"
+                        style="height: 30%"
+                      ></i>
+
+                    </div>
+
+
+                    <div class="chart-group">
+
+                      <i
+                        class="bar-entry"
+                        style="height: 70%"
+                      ></i>
+
+                      <i
+                        class="bar-exit"
+                        style="height: 45%"
+                      ></i>
+
+                    </div>
+
+
+                    <div class="chart-group">
+
+                      <i
+                        class="bar-entry"
+                        style="height: 62%"
+                      ></i>
+
+                      <i
+                        class="bar-exit"
+                        style="height: 38%"
+                      ></i>
+
+                    </div>
+
+
+                    <div class="chart-group">
+
+                      <i
+                        class="bar-entry"
+                        style="height: 85%"
+                      ></i>
+
+                      <i
+                        class="bar-exit"
+                        style="height: 55%"
+                      ></i>
+
+                    </div>
+
+
+                    <div class="chart-group">
+
+                      <i
+                        class="bar-entry"
+                        style="height: 76%"
+                      ></i>
+
+                      <i
+                        class="bar-exit"
+                        style="height: 52%"
+                      ></i>
+
+                    </div>
+
+
+                    <div class="chart-group">
+
+                      <i
+                        class="bar-entry"
+                        style="height: 92%"
+                      ></i>
+
+                      <i
+                        class="bar-exit"
+                        style="height: 60%"
+                      ></i>
+
+                    </div>
+
+                  </div>
+
+
+                  <div class="chart-labels">
+
+                    <span>Jan</span>
+                    <span>Fev</span>
+                    <span>Mar</span>
+                    <span>Abr</span>
+                    <span>Mai</span>
+                    <span>Jun</span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- CATEGORIAS -->
+
+          <section
+            class="app-section"
+            id="categorias"
+          >
+
+            <div class="dashboard-heading">
+
+              <div>
+
+                <p class="dashboard-greeting">
+                  CATEGORIAS
+                </p>
+
+                <h2>
+                  Categorias de produtos
+                </h2>
+
+                <p>
+                  Organize seus produtos por categorias.
+                </p>
+
+              </div>
+
+
+              <button
+                type="button"
+                class="panel-action"
+              >
+                + Nova categoria
+              </button>
+
+            </div>
+
+
+            <div class="categories-grid">
+
+              <div class="panel category-card">
+
+                <span class="feature-icon">
+                  💻
+                </span>
+
+                <h3>
+                  Informática
+                </h3>
+
+                <p>
+                  324 produtos
+                </p>
+
+              </div>
+
+
+              <div class="panel category-card">
+
+                <span class="feature-icon">
+                  🎧
+                </span>
+
+                <h3>
+                  Acessórios
+                </h3>
+
+                <p>
+                  218 produtos
+                </p>
+
+              </div>
+
+
+              <div class="panel category-card">
+
+                <span class="feature-icon">
+                  📱
+                </span>
+
+                <h3>
+                  Eletrônicos
+                </h3>
+
+                <p>
+                  186 produtos
+                </p>
+
+              </div>
+
+
+              <div class="panel category-card">
+
+                <span class="feature-icon">
+                  🖨
+                </span>
+
+                <h3>
+                  Escritório
+                </h3>
+
+                <p>
+                  112 produtos
+                </p>
+
+              </div>
+
+            </div>
+
+          </section>
+
+
+          <!-- CONFIGURAÇÕES -->
+
+          <section
+            class="app-section"
+            id="configuracoes"
+          >
+
+            <div class="dashboard-heading">
+
+              <div>
+
+                <p class="dashboard-greeting">
+                  CONFIGURAÇÕES
+                </p>
+
+                <h2>
+                  Configurações do sistema
+                </h2>
+
+                <p>
+                  Personalize informações e preferências.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="panel settings-panel">
+
+              <div class="setting-item">
+
+                <div>
+
+                  <strong>
+                    Nome do negócio
+                  </strong>
+
+                  <small>
+                    Nome exibido no sistema.
+                  </small>
+
+                </div>
+
+
+                <input
+                  type="text"
+                  value="Seu negócio"
+                  aria-label="Nome do negócio"
+                >
+
+              </div>
+
+
+              <div class="setting-item">
+
+                <div>
+
+                  <strong>
+                    E-mail administrativo
+                  </strong>
+
+                  <small>
+                    Contato principal da conta.
+                  </small>
+
+                </div>
+
+
+                <input
+                  type="email"
+                  value="admin@stocontrol.com"
+                  aria-label="E-mail administrativo"
+                >
+
+              </div>
+
+
+              <div class="setting-item">
+
+                <div>
+
+                  <strong>
+                    Alertas de estoque baixo
+                  </strong>
+
+                  <small>
+                    Receba avisos de reposição.
+                  </small>
+
+                </div>
+
+
+                <input
+                  type="checkbox"
+                  checked
+                  aria-label="Alertas de estoque baixo"
+                >
+
+              </div>
+
+
+              <div class="setting-item">
+
+                <div>
+
+                  <strong>
+                    Atualizações automáticas
+                  </strong>
+
+                  <small>
+                    Receba novidades do StoControl.
+                  </small>
+
+                </div>
+
+
+                <input
+                  type="checkbox"
+                  checked
+                  aria-label="Atualizações automáticas"
+                >
+
+              </div>
+
+
+              <div class="setting-item">
+
+                <div>
+
+                  <strong>
+                    Salvar configurações
+                  </strong>
+
+                  <small>
+                    Aplique as alterações realizadas.
+                  </small>
+
+                </div>
+
+
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                >
+                  Salvar alterações
+                </button>
+
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROPOSTA DE VALOR -->
+
+    <section
+      class="section value-section"
+      id="recursos"
+    >
+
+      <div class="simple-section-heading">
+
+        <span>
+          SIMPLES POR ESCOLHA
+        </span>
+
+        <h2>
+
+          O necessário para controlar seu estoque.
+
+          <br>
+
+          Nada além disso.
+
+        </h2>
+
+        <p>
+
+          Menos tempo procurando informações.
+          Mais tempo cuidando do seu negócio.
+
+        </p>
+
+      </div>
+
+
+      <div class="value-grid">
+
+        <article class="value-card">
+
+          <div class="value-number">
+            01
+          </div>
+
+          <h3>
+            Saiba exatamente o que você tem
+          </h3>
 
           <p>
-            Organize produtos, acompanhe movimentações e tome decisões
-            melhores com uma plataforma feita para simplificar sua operação.
+
+            Produtos, quantidades e categorias organizados
+            em um único lugar.
+
           </p>
 
-          <div class="hero-actions">
-            <a href="#planos" class="btn btn-primary">Começar agora <span>→</span></a>
-            <a href="#recursos" class="btn btn-outline">Conhecer recursos</a>
+        </article>
+
+
+        <article class="value-card">
+
+          <div class="value-number">
+            02
           </div>
 
-          <div class="hero-note">
-            <span>✓</span> Pare de perder horas conferindo planilhas e anotações. <br>
-            <span>✓</span> Saiba quanto está investido em produtos e evite compras desnecessárias. <br>
-            <span>✓</span> Organize entradas e saídas para diminuir falhas no controle. <br>
-            <span>✓</span> Tenha uma visão clara dos produtos que entram, saem e precisam de reposição. <br>
+          <h3>
+            Acompanhe tudo que entra e sai
+          </h3>
+
+          <p>
+
+            Consulte movimentações rapidamente e entenda
+            o que está acontecendo no estoque.
+
+          </p>
+
+        </article>
+
+
+        <article class="value-card">
+
+          <div class="value-number">
+            03
           </div>
+
+          <h3>
+            Evite ficar sem produto
+          </h3>
+
+          <p>
+
+            Identifique itens com estoque baixo antes
+            que a falta gere perda de vendas.
+
+          </p>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- DESTAQUE -->
+
+    <section class="product-highlight">
+
+      <div class="product-highlight-content">
+
+        <div class="product-highlight-text">
+
+          <span class="highlight-label">
+            VISÃO CLARA
+          </span>
+
+          <h2>
+
+            Pare de administrar seu estoque
+            no escuro.
+
+          </h2>
+
+          <p>
+
+            O StoControl transforma movimentações e quantidades
+            em informações fáceis de entender.
+
+          </p>
+
+          <a
+            href="cadastro.html"
+            class="highlight-link"
+          >
+            Começar agora →
+          </a>
+
         </div>
 
-        <div class="dashboard-preview">
-          <div class="preview-top">
+
+        <div class="highlight-points">
+
+          <div class="highlight-point">
+
+            <span>
+              ✓
+            </span>
+
             <div>
-              <span class="preview-label">VISÃO GERAL</span>
-              <h3>Resumo do estoque</h3>
+
+              <strong>
+                Controle centralizado
+              </strong>
+
+              <p>
+                Tudo em uma única plataforma.
+              </p>
+
             </div>
-            <span class="status-dot">● Online</span>
+
           </div>
 
-          <div class="preview-stats">
-            <div class="stat-card">
-              <span>Produtos</span>
-              <strong>1.248</strong>
-              <small>+12 este mês</small>
-            </div>
-            <div class="stat-card">
-              <span>Valor em estoque</span>
-              <strong>R$ 84,6 mil</strong>
-              <small>Valor estimado</small>
-            </div>
-          </div>
 
-          <div class="stock-overview">
-            <div class="overview-heading">
-              <strong>Movimentação</strong>
-              <span>Últimos 7 dias</span>
-            </div>
-            <div class="chart">
-              <div class="chart-bars">
-                <i style="height: 42%"></i>
-                <i style="height: 65%"></i>
-                <i style="height: 50%"></i>
-                <i style="height: 80%"></i>
-                <i style="height: 60%"></i>
-                <i style="height: 90%"></i>
-                <i style="height: 74%"></i>
-              </div>
-            </div>
-            <div class="chart-days">
-              <span>Seg</span><span>Ter</span><span>Qua</span>
-              <span>Qui</span><span>Sex</span><span>Sáb</span><span>Dom</span>
-            </div>
-          </div>
+          <div class="highlight-point">
 
-          <div class="preview-bottom">
+            <span>
+              ✓
+            </span>
+
             <div>
-              <span>Estoque baixo</span>
-              <strong>08 produtos</strong>
+
+              <strong>
+                Informações rápidas
+              </strong>
+
+              <p>
+                Encontre o que precisa sem perder tempo.
+              </p>
+
             </div>
-            <span class="warning-tag">Atenção necessária</span>
+
           </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="trust-section">
-      <div class="container trust-content">
-        <p>Uma plataforma para manter sua operação organizada.</p>
-        <div class="trust-items">
-          <span>✓ Simples de usar</span>
-          <span>✓ Acesso online</span>
-          <span>✓ Dados organizados</span>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" id="recursos">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">RECURSOS</span>
-          <h2>Tudo o que você precisa para gerenciar seu estoque.</h2>
-          <p>Menos planilhas, menos erros e mais clareza sobre sua operação.</p>
-        </div>
+          <div class="highlight-point">
 
-        <div class="features-grid">
-          <article class="feature-card">
-            <div class="feature-icon">▦</div>
-            <h3>Controle de produtos</h3>
-            <p>Cadastre produtos, organize categorias e acompanhe quantidades em tempo real.</p>
-          </article>
+            <span>
+              ✓
+            </span>
 
-          <article class="feature-card">
-            <div class="feature-icon">↕</div>
-            <h3>Entradas e saídas</h3>
-            <p>Registre movimentações e tenha um histórico claro de cada alteração no estoque.</p>
-          </article>
+            <div>
 
-          <article class="feature-card">
-            <div class="feature-icon">⌁</div>
-            <h3>Alertas de estoque</h3>
-            <p>Saiba quais produtos estão acabando antes que isso prejudique suas vendas.</p>
-          </article>
+              <strong>
+                Gestão mais segura
+              </strong>
 
-          <article class="feature-card">
-            <div class="feature-icon">▥</div>
-            <h3>Relatórios e indicadores</h3>
-            <p>Visualize informações importantes para tomar decisões com mais segurança.</p>
-          </article>
+              <p>
+                Menos improviso e mais controle da operação.
+              </p>
 
-          <article class="feature-card">
-            <div class="feature-icon">⌘</div>
-            <h3>Acesso de qualquer lugar</h3>
-            <p>Gerencie sua operação de onde estiver, pelo computador ou celular.</p>
-          </article>
-
-          <article class="feature-card">
-            <div class="feature-icon">✓</div>
-            <h3>Mais organização</h3>
-            <p>Centralize as informações do seu estoque em uma única plataforma.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section process-section" id="como-funciona">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">COMO FUNCIONA</span>
-          <h2>Comece em poucos minutos.</h2>
-          <p>Uma experiência simples, do cadastro ao controle diário.</p>
-        </div>
-
-        <div class="steps-grid">
-          <div class="step">
-            <span class="step-number">01</span>
-            <h3>Crie sua conta</h3>
-            <p>Cadastre sua empresa e configure seu ambiente de trabalho.</p>
-          </div>
-          <div class="step">
-            <span class="step-number">02</span>
-            <h3>Adicione seus produtos</h3>
-            <p>Organize seu catálogo com quantidades e informações importantes.</p>
-          </div>
-          <div class="step">
-            <span class="step-number">03</span>
-            <h3>Gerencie sua operação</h3>
-            <p>Acompanhe movimentações e tenha mais controle sobre seu negócio.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section pricing-section" id="planos">
-      <div class="container">
-        <div class="section-heading">
-          <span class="eyebrow">PLANOS</span>
-          <h2>Escolha o plano ideal para sua empresa.</h2>
-          <p>Comece pequeno e evolua conforme sua operação cresce.</p>
-        </div>
-
-        <div class="pricing-grid">
-          <article class="pricing-card">
-            <div class="plan-header">
-              <h3>Essencial</h3>
-              <p>Para pequenos negócios.</p>
             </div>
-            <div class="price"><strong>R$ 29,90</strong><span>/mês</span></div>
-            <a href="cadastro.html" class="btn btn-outline btn-block plan-btn" data-plan="Essencial">Começar agora</a>
-            <ul class="plan-features">
-              <li>✓ Até 500 produtos</li>
-              <li>✓ Controle de entradas e saídas</li>
-              <li>✓ Cadastro de categorias</li>
-              <li>✓ Acesso online</li>
-            </ul>
-          </article>
 
-          <article class="pricing-card featured">
-            <div class="popular-tag">MAIS ESCOLHIDO</div>
-            <div class="plan-header">
-              <h3>Profissional</h3>
-              <p>Para empresas em crescimento.</p>
-            </div>
-            <div class="price"><strong>R$ 59,90</strong><span>/mês</span></div>
-            <a href="cadastro.html" class="btn btn-primary btn-block plan-btn" data-plan="Profissional">Começar agora</a>
-            <ul class="plan-features">
-              <li>✓ Produtos ilimitados</li>
-              <li>✓ Todos os recursos Essencial</li>
-              <li>✓ Relatórios de estoque</li>
-              <li>✓ Alertas de estoque baixo</li>
-              <li>✓ Suporte prioritário</li>
-            </ul>
-          </article>
+          </div>
 
-          <article class="pricing-card">
-            <div class="plan-header">
-              <h3>Empresarial</h3>
-              <p>Para operações maiores.</p>
-            </div>
-            <div class="price"><strong>R$ 119,90</strong><span>/mês</span></div>
-            <a href="cadastro.html" class="btn btn-outline btn-block plan-btn" data-plan="Empresarial">Começar agora</a>
-            <ul class="plan-features">
-              <li>✓ Tudo do Profissional</li>
-              <li>✓ Múltiplos usuários</li>
-              <li>✓ Permissões de acesso</li>
-              <li>✓ Recursos avançados</li>
-              <li>✓ Atendimento especializado</li>
-            </ul>
-          </article>
         </div>
-        <p class="pricing-note">Preços demonstrativos. Ajuste os valores e recursos conforme seu modelo comercial.</p>
+
       </div>
+
     </section>
 
-    <section class="cta-section">
-      <div class="container cta-content">
-        <div>
-          <span class="eyebrow">COMECE AGORA</span>
-          <h2>Mais controle. Menos complicação.</h2>
-          <p>Tenha uma visão mais clara do seu estoque e dedique seu tempo ao que realmente importa.</p>
-        </div>
-        <a href="#planos" class="btn btn-light">Conhecer os planos <span>→</span></a>
+
+    <!-- PLANOS -->
+
+    <section
+      class="section pricing-section"
+      id="planos"
+    >
+
+      <div class="simple-section-heading">
+
+        <span>
+          PLANOS
+        </span>
+
+        <h2>
+
+          Comece simples.
+
+          <br>
+
+          Cresça quando precisar.
+
+        </h2>
+
+        <p>
+          Escolha o plano que faz sentido para sua operação.
+        </p>
+
       </div>
+
+
+      <div class="pricing-grid">
+
+        <article class="price-card">
+
+          <div class="plan-top">
+
+            <span class="plan-name">
+              ESSENCIAL
+            </span>
+
+            <h3>
+              Para organizar.
+            </h3>
+
+            <p>
+              Para quem está começando a controlar o estoque.
+            </p>
+
+          </div>
+
+
+          <div class="price">
+
+            R$ 29,90
+
+            <span>
+              /mês
+            </span>
+
+          </div>
+
+
+          <a
+            href="cadastro.html?plano=essencial"
+            class="btn btn-secondary btn-full"
+          >
+            Começar agora
+          </a>
+
+
+          <ul>
+
+            <li>
+              Cadastro de produtos
+            </li>
+
+            <li>
+              Controle de estoque
+            </li>
+
+            <li>
+              Entradas e saídas
+            </li>
+
+            <li>
+              Alertas básicos
+            </li>
+
+          </ul>
+
+        </article>
+
+
+        <article class="price-card featured">
+
+          <span class="popular">
+            RECOMENDADO
+          </span>
+
+
+          <div class="plan-top">
+
+            <span class="plan-name">
+              PROFISSIONAL
+            </span>
+
+            <h3>
+              Para ter controle.
+            </h3>
+
+            <p>
+              Mais recursos para operações em crescimento.
+            </p>
+
+          </div>
+
+
+          <div class="price">
+
+            R$ 59,90
+
+            <span>
+              /mês
+            </span>
+
+          </div>
+
+
+          <a
+            href="cadastro.html?plano=profissional"
+            class="btn btn-primary btn-full"
+          >
+            Começar agora
+          </a>
+
+
+          <ul>
+
+            <li>
+              Tudo do Essencial
+            </li>
+
+            <li>
+              Relatórios
+            </li>
+
+            <li>
+              Alertas avançados
+            </li>
+
+            <li>
+              Mais controle da operação
+            </li>
+
+          </ul>
+
+        </article>
+
+
+        <article class="price-card">
+
+          <div class="plan-top">
+
+            <span class="plan-name">
+              EMPRESARIAL
+            </span>
+
+            <h3>
+              Para escalar.
+            </h3>
+
+            <p>
+              Para operações maiores e necessidades específicas.
+            </p>
+
+          </div>
+
+
+          <div class="price business-price">
+            Sob consulta
+          </div>
+
+
+          <a
+            href="#contato"
+            class="btn btn-secondary btn-full"
+          >
+            Falar conosco
+          </a>
+
+
+          <ul>
+
+            <li>
+              Recursos personalizados
+            </li>
+
+            <li>
+              Atendimento dedicado
+            </li>
+
+            <li>
+              Integrações
+            </li>
+
+            <li>
+              Condições personalizadas
+            </li>
+
+          </ul>
+
+        </article>
+
+      </div>
+
     </section>
+
+
+    <!-- FAQ -->
+
+    <section
+      class="section faq-section"
+      id="faq"
+    >
+
+      <div class="simple-section-heading">
+
+        <span>
+          DÚVIDAS
+        </span>
+
+        <h2>
+          Perguntas frequentes.
+        </h2>
+
+      </div>
+
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+
+          <button
+            type="button"
+            class="faq-question"
+          >
+
+            Preciso instalar alguma coisa?
+
+            <span>
+              +
+            </span>
+
+          </button>
+
+          <div class="faq-answer">
+
+            Não. O StoControl funciona pelo navegador,
+            permitindo acessar sua conta online.
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button
+            type="button"
+            class="faq-question"
+          >
+
+            Posso controlar entradas e saídas?
+
+            <span>
+              +
+            </span>
+
+          </button>
+
+          <div class="faq-answer">
+
+            Sim. A plataforma foi criada para registrar e consultar
+            movimentações de estoque de forma simples.
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button
+            type="button"
+            class="faq-question"
+          >
+
+            Consigo identificar produtos com estoque baixo?
+
+            <span>
+              +
+            </span>
+
+          </button>
+
+          <div class="faq-answer">
+
+            Sim. O sistema permite acompanhar itens que precisam
+            de atenção ou reposição.
+
+          </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+          <button
+            type="button"
+            class="faq-question"
+          >
+
+            Posso mudar de plano?
+
+            <span>
+              +
+            </span>
+
+          </button>
+
+          <div class="faq-answer">
+
+            A estrutura do StoControl permite oferecer diferentes
+            níveis de assinatura conforme a necessidade da empresa.
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section
+      class="final-cta final-cta-new"
+      id="contato"
+    >
+
+      <div class="cta-content">
+
+        <span class="cta-small">
+          MENOS PLANILHAS. MAIS CONTROLE.
+        </span>
+
+        <h2>
+
+          Seu estoque pode ser
+
+          <span>
+            mais simples.
+          </span>
+
+        </h2>
+
+        <p>
+
+          Organize sua operação e tenha as informações
+          que precisa em poucos cliques.
+
+        </p>
+
+        <a
+          href="cadastro.html"
+          class="btn btn-primary btn-large"
+        >
+          Criar minha conta →
+        </a>
+
+      </div>
+
+    </section>
+
   </main>
 
-  <footer class="footer" id="login">
-    <div class="container footer-top">
+
+  <!-- FOOTER -->
+
+  <footer class="footer footer-new">
+
+    <div class="footer-simple">
+
       <div>
-        <a href="#" class="logo">Sto<span>Control</span></a>
-        <p>Gestão de estoque sem complicação.</p>
+
+        <a
+          href="#inicio"
+          class="logo"
+        >
+          Sto<span>Control</span>
+        </a>
+
+        <p>
+          Estoque organizado. Negócio sob controle.
+        </p>
+
       </div>
-      <div class="footer-links">
-        <div>
-          <strong>Produto</strong>
-          <a href="#recursos">Recursos</a>
-          <a href="#planos">Planos</a>
-          <a href="#como-funciona">Como funciona</a>
-        </div>
-        <div>
-          <strong>Empresa</strong>
-          <a href="#">Sobre nós</a>
-          <a href="#">Contato</a>
-          <a href="#">Suporte</a>
-        </div>
+
+
+      <div class="footer-simple-links">
+
+        <a href="#solucao">
+          Produto
+        </a>
+
+        <a href="#planos">
+          Planos
+        </a>
+
+        <a href="login.html">
+          Entrar
+        </a>
+
+        <a href="cadastro.html">
+          Criar conta
+        </a>
+
       </div>
+
     </div>
-    <div class="container footer-bottom">
-      <span>© 2026 Stocontrol. Todos os direitos reservados.</span>
-      <div>
-        <a href="#">Termos de uso</a>
-        <a href="#">Privacidade</a>
-      </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © 2026 StoControl.
+      </span>
+
+      <span>
+        Todos os direitos reservados.
+      </span>
+
     </div>
+
   </footer>
 
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="js/script.js"></script>
 </body>
+
 </html>
